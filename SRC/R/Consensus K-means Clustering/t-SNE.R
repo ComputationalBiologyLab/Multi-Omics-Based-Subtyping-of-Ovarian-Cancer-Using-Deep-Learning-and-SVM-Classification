@@ -20,7 +20,13 @@ colors <- brewer.pal(num_clusters, "Paired")
 # Plot t-SNE with different colors for each cluster
 ggplot(tsne_df, aes(x = X1, y = X2, color = factor(label))) +
   geom_point() +
-  scale_color_manual(values = colors) +
-  labs(title = "t-SNE Plot")
-
+  scale_color_manual(values = colors, labels = c("Subtype 1", "Subtype 2")) +  # Replace with actual labels
+  labs(x = "Component 1", y = "Component 2") +
+  theme(
+    plot.title = element_text(face = "bold", size = 16),
+    axis.title.x = element_text(face = "bold", size = 14),
+    axis.title.y = element_text(face = "bold", size = 14),
+    axis.text.x = element_text(size = 12),
+    axis.text.y = element_text(size = 12)
+  )
 
