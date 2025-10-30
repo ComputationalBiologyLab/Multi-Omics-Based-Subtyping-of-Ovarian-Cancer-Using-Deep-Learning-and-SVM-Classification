@@ -19,3 +19,8 @@ The pipeline of this project consists of 6 phases:
 	#Reactome GSA:It analyzes the functional pathways and enriched genes to see the biological processes differences among the two clusters. This is the link to the analysis tool: https://reactome.org/gsa/home. Camera analysis method was used with default paramters.  
 
 	#CIBERSORTx:It calculated the abundances of the 22 immunce cell types in each cluster. Each input file is inserted in CYBERSORTx tool in the following link: https://cibersortx.stanford.edu/, with the following parameters: Impute cell fractions, Signature matrix file = LM22, Mixture file = pre-processed gene expression data, Enable batch 			correction (B-mode), Disable quantile normalization, Run in absolute mode, and 100 permutations. Then, Mann-Whitney U test (scipy.stats module) is applied on output files to see which cell type is significant between the two clusters. 
+
+## Citation
+If you use this work, or any of the associated code/materials, in your own research or publication, please cite our paper:
+
+E. Hozain and E. Badr, "Multi-Omics-Based Subtyping of Ovarian Cancer Using Deep Learning and SVM Classification," 2025 Intelligent Methods, Systems, and Applications​ (IMSA), Giza, Egypt, 2025, pp. 401-406, doi: 10.1109/IMSA65733.2025.11166936.
